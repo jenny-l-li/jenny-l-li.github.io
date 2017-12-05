@@ -7,6 +7,11 @@ h1, h2, header, p, a {
 
 body{
 	margin: 0;
+	background-color: #f4f9f9;
+}
+
+a{
+	text-decoration: none;
 }
 
 .sidebar{
@@ -45,40 +50,41 @@ body{
 }
 
 .sidebar__description{
-	margin-top: 185px;
-	margin-left: 30px;
-}
-
-.sidebar__description h1{
-	font-family: 'Calibre';
-	font-size: 28px;
-	color: #f2f5f9;
-	font-weight: 500;
+	margin-top: 335px;
+	margin-left: 20px;
 }
 
 .sidebar__description ul{
 	text-decoration: none;
+	text-align: center;
 	list-style: none;
 	padding: 0;
+}
+
+.sidebar__description li a {
+	list-style: none;
+    color: inherit;
+    transition: 0.2s;
 }
 
 .sidebar__description ul li {
 	font-family: 'Calibre';
 	color: #f2f5f9;
 	font-weight: 300;
-	margin-bottom: 6px;
+	margin-bottom: 16px;
 	font-size: 22px;
 	line-height: 24px;
 	max-width: 90%;
 }
 
 .sidebar__links{
-	margin-left: 30px;
-	margin-top: 155px;
+	text-align: center;
+	margin-left: 20px;
+	margin-top: 53px;
 }
 
 .sidebar__links a{
-	margin-right: 15px;
+	margin-right: 25px;
 	text-decoration: none;
 }
 
@@ -91,14 +97,25 @@ body{
 	color: white;
 }
 
+p {
+	font-size: 1.2rem;
+    font-weight: normal;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    text-rendering: optimizeLegibility;
+    text-align: left;
+}
+
 .projects{
+	/*background-color: #f9f4f8;*/
+	/*background-image: url("http://gdj.graphicdesignjunction.com/wp-content/uploads/2012/10/background+pattern+design+33.jpg");*/
 	float: left;
 	width: 73vw;
 }
 
 .projects__title{
 	margin: auto;
-	margin-top: 150px;
+	margin-top: 75px;
 	text-align: center;
 }
 
@@ -109,6 +126,28 @@ body{
 	font-size: 50px;
 }
 
+.projects__title h2{
+	font-family: 'Abel';
+	font-weight: 200;
+	color: #5b5f66;
+	font-size: 40px;
+	margin-top: 20px;
+}
+
+.about__container {
+	width: 60vw;
+	margin: auto;
+	margin-top: 45px;
+}
+
+.about__container p {
+	font-family: 'Calibre';
+    border-left: 2px solid darkgrey;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+
 .projects__container{
 	width: 60vw;
 	margin: auto;
@@ -118,38 +157,142 @@ body{
 .project{
 	width: 50%;
 	display: inline-block;
-	height: 250px;
+	height: 400px;
 	overflow: hidden;
-	margin: 0;
+	margin:0;
 	float: left;
 	transition: all .2s ease;
 }
 
 .project img{
 	max-height: 100%;
-	min-width: 100%;
+	min-width: 70%;
+	margin:0 auto;
+	display: block;
+}
+
+.project .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.project ul{
+	text-decoration: none;
+	list-style: none;
+	padding: 0;
+}
+
+.project ul li{
+	color: white;
+	font-weight: 300;
+/*	line-height: 24px;*/
+	max-width: 100%;
+	text-align: center;
+    text-shadow:
+/*    -1px -1px 0 #666666,*/
+/*    1px -1px 0 #666666,*/
+/*    -1px 1px 0 #666666,*/
+    1px 1px 0 #666666;  
+}
+
+.project .head{
+	font-size: 34px; 
+	font-family: 'Calibre'
+}
+
+.project .cap{
+	font-size: 27px; 
+	font-family: 'Abel'; 
+	padding-top: 10px;
 }
 
 .project:hover{
 	transform: scaleX(1.1) scaleY(1.1);
 	box-shadow: 5px 5px 15px #282828;
+
+}
+
+.project:hover .centered{
+	display: block;
+	text-transform: 
+	-webkit-filter: brightness(100%);
+	filter: brightness(100%);
+}
+
+.project:hover ul li{
+	
+	max-width: 100%;
+}
+
+.project:hover img{
+	-webkit-filter: brightness(50%);
+/*    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;*/
+}
+
+.project#fakeapp{
+	background-color: #846f6e;
+}
+
+.project#fakeapp:hover{
+	background-color: #352D2D;
+}
+
+.project#fakeapp:hover img{
+	-webkit-filter: brightness(40%);
+}
+
+
+.contact__container p {
+	font-family: 'Calibre';
+	font-weight: 200;
+	color: #5b5f66;
+	font-size: 30px;
+	text-align: center;
+	margin-top: 25px
 }
 
 .content{
 	float: left;
 	width: 73vw;
+	height: auto;
 }
 
 .content__main{
 	margin: auto;
 	width: 70%;
-	height: 400px;
-	margin-top: 100px;
+	margin-top: 60px;
 }
 
 .content__main img{
 	min-width: 100%;
 	max-height: 100%;
+	width:100%;
+}
+
+.content__main video{
+	max-width: 70%;
+	margin: auto;
+	display: block;
+}
+
+.content__main h3{
+	color:#47e0e0;
+	font-family: 'Brandon Text';
+	font-weight: 100;
+	font-size: 25px;
+	margin: auto;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.content__main a{
+	color: #326c72;
 }
 
 .content__description{
@@ -164,6 +307,47 @@ body{
 	width: 70%;
 	margin: auto;
 	margin-top: 50px;
+}
+
+.content__info {
+	margin: auto;
+	margin-left: 60px;
+	font-family: Abel;
+}
+
+.content__info h1{
+	margin-top: 80px;
+	font-weight: bold;
+	/*font-size: 40px;*/
+}
+
+.content__info h2{
+	margin-top: 30px;
+	font-family: Abel;
+}
+
+.content__info li{
+	font-family: 'Brandon Text';
+	list-style-type: square;
+	font-stretch: 20px;
+	padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 10px;
+}
+
+.content__info p {
+	font-family: 'Brandon Text';
+	font-stretch: 20px;
+    border-left: 2px solid darkgrey;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 20px;
+}
+
+.content__screenshot{
+	margin: auto;
+	margin-top: 50px;
+	width: 30%;
 }
 
 @media (max-width: 768px) {
