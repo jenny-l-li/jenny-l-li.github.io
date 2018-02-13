@@ -23,6 +23,8 @@ a{
 	/*test*/
 	display: flex;
     flex-flow: column;
+    justify-content: center;
+/*  	align-items: center;*/
 }
 
 .fakeDiv{
@@ -56,7 +58,6 @@ a{
 .illust {
 	/*position: fixed;*/
 	width: 90%;
-	margin-top: 25px;
     /*margin-left: 25px;*/
     padding-bottom: 10px;
 }
@@ -71,6 +72,9 @@ a{
 	flex: 1 1 auto;
 	/*margin-top: 335px;*/
 	margin-left: 20px;
+	display: flex;
+    flex-flow: column;
+    justify-content: center;
 }
 
 .sidebar__content ul{
@@ -78,6 +82,7 @@ a{
 	text-align: center;
 	list-style: none;
 	padding: 0;
+	align-items: center;
 }
 
 .sidebar__content li a {
