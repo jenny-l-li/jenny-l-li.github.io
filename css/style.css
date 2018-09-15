@@ -7,11 +7,21 @@ h1, h2, header, p, a {
 
 body{
 	margin: 0;
-	background-color: #f4f9f9;
+	/*light theme*/
+	/*background-color: #f4f9f9;*/
+	background-color: #45434c;
 }
 
 a{
 	text-decoration: none;
+}
+
+p, li{
+	color: #f2f5f9;
+}
+
+h1{
+	color: #a6adb9;
 }
 
 .sidebar{
@@ -20,7 +30,6 @@ a{
 	background-color: #322e33;
 	position: fixed;
 	left: 0;
-	/*test*/
 	display: flex;
     flex-flow: column;
     justify-content: center;
@@ -137,6 +146,10 @@ p {
 	width: 73vw;
 }
 
+.projects .projects__title h1{
+/*	color: #c9e6ead1;*/
+}
+
 .projects__title{
 	margin: auto;
 	margin-top: 75px;
@@ -146,14 +159,18 @@ p {
 .projects__title h1{
 	font-family: 'Calibre';
 	font-weight: 300;
-	color: #5b5f66;
+	/*color: #5b5f66;*/
+	/*color: #a6adb9;*/
+	/*color: #322e33;*/
+	color: #c4dee2;
 	font-size: 50px;
 }
 
 .projects__title h2{
 	font-family: 'Abel';
 	font-weight: 200;
-	color: #5b5f66;
+	/*color: #5b5f66;*/
+	color: #8cced6;
 	font-size: 40px;
 	margin-top: 20px;
 }
@@ -165,8 +182,9 @@ p {
 }
 
 .about__container p {
+	color: #f2f5f9;
 	font-family: 'Calibre';
-    border-left: 2px solid darkgrey;
+    border-left: 2px solid #8cced6;
     padding-left: 1em;
     padding-right: 1em;
 }
@@ -277,7 +295,6 @@ p {
 .contact__container p {
 	font-family: 'Calibre';
 	font-weight: 200;
-	color: #5b5f66;
 	font-size: 30px;
 	text-align: center;
 	margin-top: 25px;
@@ -319,7 +336,8 @@ p {
 }
 
 .content__main a{
-	color: #326c72;
+	/*color: #326c72;*/
+	color: #30d1d1;
 }
 
 .content__description{
@@ -327,7 +345,7 @@ p {
 }
 
 .content__description p{
-	color: #5b5f66;
+	color: #a6adb9;
 	font-family: 'Brandon Text';
 	font-size: 30px;
 	line-height: 30px;
@@ -346,11 +364,13 @@ p {
 	margin-top: 80px;
 	font-weight: bold;
 	/*font-size: 40px;*/
+	color: #7cd7e2;
 }
 
 .content__info h2{
 	margin-top: 30px;
 	font-family: Abel;
+	color: #8cced6;
 }
 
 .content__info li{
@@ -360,12 +380,13 @@ p {
 	padding-left: 1em;
     padding-right: 1em;
     margin-top: 10px;
+    -webkit-font-smoothing: antialiased;
 }
 
 .content__info p {
 	font-family: 'Brandon Text';
 	font-stretch: 20px;
-    border-left: 2px solid darkgrey;
+    border-left: 2px solid #8cced6;
     padding-left: 1em;
     padding-right: 1em;
     margin-top: 20px;
