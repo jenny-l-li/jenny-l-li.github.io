@@ -12,12 +12,30 @@ body{
 	background-color: #45434c;
 }
 
-a{
-	text-decoration: none;
+p {
+	font-size: 1.2rem;
+    font-weight: normal;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    text-rendering: optimizeLegibility;
+    text-align: left;
 }
 
 p, li{
 	color: #f2f5f9;
+}
+
+p, ul {
+	opacity: 0.7;
+    transition: all .5s ease;
+}
+
+p:hover, ul:hover {
+	opacity: 1;
+}
+
+a{
+	text-decoration: none;
 }
 
 h1{
@@ -42,9 +60,11 @@ h1{
 	float: left;
 }
 
+
 .sidebar__title{
 	margin-top: 60px;
 	margin-left: 30px;
+	margin-right: 25px;
 	flex: 0 1 auto;
 }
 
@@ -68,7 +88,7 @@ h1{
 	/*position: fixed;*/
 	width: 90%;
     /*margin-left: 25px;*/
-    padding-bottom: 10px;
+/*    padding-bottom: 10px;*/
 }
 
 .illust img {
@@ -128,15 +148,6 @@ h1{
 
 .fa:hover{
 	color: white;
-}
-
-p {
-	font-size: 1.2rem;
-    font-weight: normal;
-    line-height: 1.6;
-    margin-bottom: 1.25rem;
-    text-rendering: optimizeLegibility;
-    text-align: left;
 }
 
 .projects{
@@ -399,7 +410,7 @@ p {
 }
 
 @media (max-width: 768px) {
-	.fakeDiv, .sidebar {
+	.fakeDiv{
 		display: none;
 	}
 
@@ -410,5 +421,79 @@ p {
 
 	.projects__title {
 		margin: 45px;
+	}
+}
+
+
+@media (max-width: 780px) {
+  .fakeDiv, .illust {
+    display: none;
+  }
+
+  .projects {
+  	width: 100vw;
+  }
+
+  .about__container, .projects__container {
+  	width: 85vw;
+  }
+
+  .sidebar {
+    flex-flow: row;
+    width: 100vw;
+    height: 70px;
+    align-items: center;
+    top: 0;
+    z-index: 2;
+  }
+
+  .sidebar__title {
+  	margin-top: 0;
+  	margin-left: 30px;
+  }
+
+   .sidebar__title h1 {
+  	margin-bottom: 0;
+  }
+
+  .sidebar__title h2 {
+  	display: none;
+  }
+
+  .sidebar__content {
+  	flex: 1;
+  	margin: 0;
+  }
+
+  .sidebar__content ul {
+  	text-align: start;
+  }
+
+  .sidebar__content ul li {
+    margin-right: 5px;
+    display: inline;
+  }
+
+  .sidebar__links {
+  	margin-right: 10px;
+  	margin-left: 0;
+    flex: 0 auto;
+  }
+
+  .sidebar__links a {
+    margin-right: 10px;
+    opacity: .8;
+   }
+}
+
+@media (max-width: 636px) {
+	.sidebar__links{
+		display: none;
+	}
+}
+
+@media (max-width: 540px) {
+	.project{
+		width: 100%;
 	}
 }
