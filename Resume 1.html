@@ -1,0 +1,390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:doc="http://xsltsl.org/xsl/documentation/1.0" xmlns:dt="http://xsltsl.org/date-time" xmlns:str="http://xsltsl.org/string" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <title>Jenny Li</title>
+    <style type="text/css" id="static">
+        html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+        body{line-height:1;background:#FFF;text-align:left}
+        ol,ul{list-style:none}
+        blockquote,q{quotes:none}
+        blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+        :focus{outline:0}
+        ins{text-decoration:none}
+        del{text-decoration:line-through}
+        table{border-collapse:collapse;border-spacing:0}
+        a img{border:none}
+        div#document ul{list-style-type:disc;padding:0}
+        div#document li{list-style-type:disc;margin:0 0 0 10px;padding:0}
+        div#document ul li{margin:0 0 0 14px}
+        .clear{clear:both;height:0}
+        br.clear{line-height:0}
+        div#document{color:#4a4a4a;background-color:#fff!important}
+        div#document div.SECTION_CNTC,div#document div.firstsection{margin-top:0;border:none;padding:0}
+        /*div#document .section{overflow:hidden}*/
+        div.name{color:#4a4a4a;font-weight:600;font-size:15px;line-height:17px;padding:0;text-transform:uppercase;text-align:center}
+        div#document div.sectiontitle,.resumeTitle,.execRsmTitle{font-weight:600;display:inline-block;position:relative;z-index:1;background:#FFF;padding:0 10px 0 0}
+        div.paragraph{position:relative}
+        div.heading,.resumeTitle,.execRsmTitle{clear:both;position:relative}
+        div.address{position:relative;text-align:center;font-size:0.917em;line-height:1.25em;margin-top:11px}
+        div#document div.address li,div#document div.address ul{display:inline;margin:0;padding:0;list-style:none}
+        div#document div.address li:before{content:"\2022\0020";vertical-align:bottom}
+        div#document div.address li.first:before{content:""}
+        div.address2{position:relative;text-align:left;font-size:0.917em;line-height:1.25em}
+        span.paddedline{display:block}
+        .jobtitle,.degree{font-weight:bold}
+        .table_wrapper{width:100%;margin-top:0}
+        table.twocol td{width:50%}
+        table.skills,table.twocol{width:100%}
+        table.skills th,table.skills td{width:20%;text-align:center}
+        table.skills th{text-decoration:underline}
+        table.skills .skillname,table.skills .skillrating{text-align:left;width:35%}
+        table.skills .skillrating{width:20%}
+        table.skills .skillyears,table.skills .skilllast{width:19%}
+        table.skills .pad1{width:5%}
+        table.skills .pad2,table.skills .pad3{width:1%}
+        td.twocol_2{border-left:1px solid #FEFDFD}
+        .nameLogo{text-align:center}
+        .nameLogo text{text-transform:uppercase}
+
+        .sprtr{margin:0 5px}
+        .txtItl{font-style:italic}
+        span.dates_wrapper{display:block; float:left;}
+        .hiltSec{width:100%}
+        .parlrColmn{width:100%;display:table}
+        div#document .excSmry ul,div#document .excExp ul{margin-top:5px}
+
+        /*FIX for FORCEFULLY making left margin ZERO for CL*/
+        div#document .sectionCL .paragraph{margin-top:0!important}
+        .sprtr + .sprtr{display:none;}
+        .educsprtr + .educsprtr{display:none;}
+    </style>
+    <style type="text/css" id="unparsed">
+        div#document{line-height:{$FTLH}px}
+        div#document table{line-height:{$FTLH}px}
+        div#document.pagesize{width:{$DOCW}px}
+        div#document.vmargins{padding-top:{$TBMR}px; padding-bottom:{$TBMR}px}
+        div#document.hmargins{padding-left:{$LRMR}px; padding-right:{$LRMR}px}
+        div#document .section{margin-top:{$SCSP}px}
+        div#document div.sectiontitle,.resumeTitle,.execRsmTitle{font-size:{$HDSZ}px; line-height:{$HDLH}px}
+        div#document div.heading,.resumeTitle,.execRsmTitle{margin-bottom:{$SHMB}px}
+        div#document div.heading:before {border-top:1px solid #bcbfc3;content:"";display:block;height:1px;position:absolute;top:50%;width:100%;z-index:1}
+        div#document div.paragraph{margin-top:{$PSPC}px}
+        div#document div.firstparagraph{margin-top:0}
+        div#document .singlecolumn,div#document .maincolumn{margin-left:{$PIND}px;width:{$MACW}px}
+        div#document table.skills td{padding-top:{$TDMT}px}
+        .fontsize{font-size:{$FTSZ}px}
+        .fontface{font-family:{$FTFC}}
+        div.name{font-size:{$NMSZ}px; line-height:{$NMLH}px}
+        div.address{font-size:{$CISZ}px; line-height:{$CILH}px; margin-top:{$CIMT}px}
+        div#document div.address li:before{font-size:{$BTSZ}px;color:#44b3e6;margin-right:-3px}
+        span.dates_wrapper{width:{$SCML}px}
+        div#document .parlrColmn .singlecolumn{margin-left:{$SCML}px;width:auto}
+        div#document .parlrColmn .singlecolumn ul li{padding-bottom:2px}
+        div#document .hiltSec .singlecolumn{width:auto}
+
+        .nameLogo svg{width:{$MNGW}px;height:{$MNGH}px}
+
+        /*FIX for Re-calculating width of singlecolumn for CL*/
+        div#document .sectionCL{border:none;margin-top:none;}
+        div#document .sectionCL .singlecolumn{margin-left:0!important; width:100%}
+        div.address2{font-size:{$FTSZ}px; line-height:{$FTLH}px}
+    </style>
+    <style type="text/css" id="dynamic">
+        div#document{line-height:13px}
+        div#document table{line-height:13px}
+        div#document.pagesize{width:542px}
+        div#document.vmargins{padding-top:25px; padding-bottom:25px}
+        div#document.hmargins{padding-left:35px; padding-right:35px}
+        div#document .section{margin-top:15px}
+        div#document div.sectiontitle,.resumeTitle,.execRsmTitle{font-size:12px; line-height:15px}
+        div#document div.heading,.resumeTitle,.execRsmTitle{margin-bottom:12px}
+        div#document div.heading:before {border-top:1px solid #bcbfc3;content:"";display:block;height:1px;position:absolute;top:50%;width:100%;z-index:1}
+        div#document div.paragraph{margin-top:10px}
+        div#document div.firstparagraph{margin-top:0}
+        div#document .singlecolumn,div#document .maincolumn{margin-left:0px;width:542px}
+        div#document table.skills td{padding-top:5px}
+        .fontsize{font-size:10px}
+        .fontface{font-family:"Palatino Linotype", Palatino, serif}
+        div.name{font-size:26px; line-height:38px}
+        div.address{font-size:10px; line-height:13px; margin-top:5px}
+        div#document div.address li:before{font-size:21px;color:#44b3e6;margin-right:-3px}
+        span.dates_wrapper{width:194px}
+        div#document .parlrColmn .singlecolumn{margin-left:194px;width:auto}
+        div#document .parlrColmn .singlecolumn ul li{padding-bottom:2px}
+        div#document .hiltSec .singlecolumn{width:auto}
+
+        .nameLogo svg{width:50px;height:50px}
+
+        /*FIX for Re-calculating width of singlecolumn for CL*/
+        div#document .sectionCL{border:none;margin-top:none;}
+        div#document .sectionCL .singlecolumn{margin-left:0!important; width:100%}
+        div.address2{font-size:10px; line-height:13px}
+    </style>
+  </head>
+  <body>
+    <div id="document" class="fontsize fontface vmargins hmargins linespacing pagesize">
+      <div id="SECTION_NAMEbf63a784-3990-41ff-8bd0-9a89ec15e8d5" class="section firstsection" style="padding-top:0px;">
+        <div id="PARAGRAPH_bf63a784-3990-41ff-8bd0-9a89ec15e8d5_1_6515c733-cbfd-42c4-814d-40287cfcf3b3" class="paragraph PARAGRAPH_NAME firstparagraph" style="padding-top:NaNpx;">
+                <div class="nameLogo">
+                    <svg viewbox="0 0 50 50" enable-background="0 0 50 50">
+                        <circle cx="25px" cy="25px" r="24px" style="fill:#fff;stroke-width:1;stroke:#4a4a4a"></circle>
+                        <text text-anchor="middle" x="25px" y="32px" fill="#4a4a4a" font-size="20px" font-weight="900" id="bf63a784-3990-41ff-8bd0-9a89ec15e8d5SUBSTR_FALN1">JL</text>
+                    </svg>
+                </div>
+                <div class="name">
+                    <span class="field" id="bf63a784-3990-41ff-8bd0-9a89ec15e8d5FNAM1">Jenny</span><span></span>
+                    <span class="field" id="bf63a784-3990-41ff-8bd0-9a89ec15e8d5LNAM1">Li</span>
+                </div>
+            </div>
+      </div>
+      <div id="SECTION_CNTC00538da3-30d0-4841-82e8-02700454cd3e" class="section SECTION_CNTC" style="padding-top:0px;">
+        <div id="PARAGRAPH_00538da3-30d0-4841-82e8-02700454cd3e_1_aa7efa5b-1292-418e-8a7e-4d2bf3e06318" class="paragraph PARAGRAPH_CNTC firstparagraph" style="padding-top:0px;">
+                <div class="address">
+                    <span class="field" id="00538da3-30d0-4841-82e8-02700454cd3eEMAI1">lijenny2772@gmail.com</span><span><span class="sprtr"> | </span></span>
+                    <span>H: </span><span class="field" id="00538da3-30d0-4841-82e8-02700454cd3eHPHN1">858-356-7990</span><span><span class="sprtr"> | </span></span>
+                    <span class="field" id="00538da3-30d0-4841-82e8-02700454cd3eCPHN1"></span>
+                    <span class="field" id="00538da3-30d0-4841-82e8-02700454cd3eSTRT1">Portfolio Website: https://github.com/jenny-l-li/ </span>
+                    <span class="spaced field" id="00538da3-30d0-4841-82e8-02700454cd3eCITY1"></span>
+                    <span class="spaced field" id="00538da3-30d0-4841-82e8-02700454cd3eSTAT1"></span>
+                    <span class="spaced field" id="00538da3-30d0-4841-82e8-02700454cd3eZIPC1"></span>
+                </div>
+            </div>
+      </div>
+      <div id="SECTION_EDUCc7f95cb0-4123-458e-abe1-8bfa23571cb2" class="section" style="padding-top:0px;">
+        <div class="heading">
+                <div id="SECTNAME_EDUCc7f95cb0-4123-458e-abe1-8bfa23571cb2" class="sectiontitle">Education</div>
+            </div>
+        <div id="PARAGRAPH_c7f95cb0-4123-458e-abe1-8bfa23571cb2_1_27a053a4-2dfe-41ca-8ade-cff6003d250c" class="paragraph firstparagraph" style="padding-top:0px;">
+                <div class="singlecolumn">
+                    <span class="paddedline">
+                        <span class="companyname" id="c7f95cb0-4123-458e-abe1-8bfa23571cb2SCHO1">University of California, Los Angeles</span>
+                        <span class="joblocation jobcity" id="c7f95cb0-4123-458e-abe1-8bfa23571cb2SCIT1"></span>
+                        <span class="joblocation jobstate" id="c7f95cb0-4123-458e-abe1-8bfa23571cb2SSTA1"></span>
+                        <span class="joblocation jobcountry" id="c7f95cb0-4123-458e-abe1-8bfa23571cb2SCNT1"></span>
+                    </span>
+                    <span class="paddedline">
+                        <span class="degree" id="c7f95cb0-4123-458e-abe1-8bfa23571cb2DGRE1">B.S</span><span> in </span>
+                        <span class="programline" id="c7f95cb0-4123-458e-abe1-8bfa23571cb2STUY1">Computer  Science    </span>
+                    </span>
+                    
+          
+          <span class="field" id="c7f95cb0-4123-458e-abe1-8bfa23571cb2FRFM1"><p>Expected June 2021 | GPA: 4.0</p></span>
+                </div>
+            </div>
+        <div id="PARAGRAPH_c7f95cb0-4123-458e-abe1-8bfa23571cb2_2_32562a71-2aaa-48bf-88be-b8275bd4af6c" class="paragraph" style="padding-top:0px;">
+                <div class="singlecolumn">
+                    
+                    <span class="paddedline">
+                        <span class="degree" id="c7f95cb0-4123-458e-abe1-8bfa23571cb2DGRE2">Coursework</span>
+                        <span class="programline" id="c7f95cb0-4123-458e-abe1-8bfa23571cb2STUY2"></span>
+                    </span>
+                    
+          
+          <span class="field" id="c7f95cb0-4123-458e-abe1-8bfa23571cb2FRFM2"><p>Data Structures and Algorithms, Machine Organization &amp; Assembly, Introduction to Computer Science, &nbsp;Software Construction Laboratory, Logic Design of Digital Systems</p></span>
+                </div>
+            </div>
+      </div>
+      <div id="SECTION_EXPR5de03907-ffff-49ff-98fb-100b7c784830" class="section" style="padding-top:0px;">
+        <div class="heading">
+                <div id="SECTNAME_EXPR5de03907-ffff-49ff-98fb-100b7c784830" class="sectiontitle">Experience</div>
+            </div>
+        <div id="PARAGRAPH_5de03907-ffff-49ff-98fb-100b7c784830_1_2e5a7051-893e-4204-b7a9-465a8627751e" class="paragraph parlrColmn firstparagraph" style="padding-top:0px;">
+                <span class="dates_wrapper">
+                    <span class="paddedline">
+                        <span class="companyname" id="5de03907-ffff-49ff-98fb-100b7c784830COMP1">Symantec</span><span class="joblocation jobcity" id="5de03907-ffff-49ff-98fb-100b7c784830JCIT1"></span><span class="joblocation jobstate" id="5de03907-ffff-49ff-98fb-100b7c784830JSTA1"></span>
+                    </span>
+                    <span class="paddedline">
+                        <span class="jobtitle" id="5de03907-ffff-49ff-98fb-100b7c784830JTIT1">Software Engineer Intern | Norton Business Unit</span>
+                    </span>
+                    <span class="paddedline txtItl">
+                        <span class="jobdates" format="%m/%Y" id="5de03907-ffff-49ff-98fb-100b7c784830JSTD1">06/2018</span>
+                        <span> - </span>
+                        <span class="jobdates" format="%m/%Y" id="5de03907-ffff-49ff-98fb-100b7c784830EDDT1">09/2018</span>
+                    </span>
+                </span>
+                <div class="singlecolumn">
+                    <span class="jobline" id="5de03907-ffff-49ff-98fb-100b7c784830JDES1"><ul>
+  <li>Implemented UI improvements to Norton Secure Login's user account settings pages; created new JSP pages for edit information functionalities with HTML, LESS, and Javascript</li>
+  <li>Implemented webflow changes for these new pages' XML files using Spring Web Flow</li>
+  <li>Fixed defects in the code base such as by writing JUnit tests for a Java class, writing Bash script to manipulate files, and testing web page functionality using Selenium automation</li>
+</ul></span>
+                </div>
+            </div>
+        <div id="PARAGRAPH_5de03907-ffff-49ff-98fb-100b7c784830_2_f2ea5956-a959-414c-a7ad-23f9df4c8de1" class="paragraph parlrColmn" style="padding-top:0px;">
+                <span class="dates_wrapper">
+                    <span class="paddedline">
+                        <span class="companyname" id="5de03907-ffff-49ff-98fb-100b7c784830COMP2">UCSD Scripps Institute of Oceanography</span><span class="joblocation jobcity" id="5de03907-ffff-49ff-98fb-100b7c784830JCIT2"></span><span class="joblocation jobstate" id="5de03907-ffff-49ff-98fb-100b7c784830JSTA2"></span>
+                    </span>
+                    <span class="paddedline">
+                        <span class="jobtitle" id="5de03907-ffff-49ff-98fb-100b7c784830JTIT2">Intern</span>
+                    </span>
+                    <span class="paddedline txtItl">
+                        <span class="jobdates" format="%m/%Y" id="5de03907-ffff-49ff-98fb-100b7c784830JSTD2">06/2016</span>
+                        <span> - </span>
+                        <span class="jobdates" format="%m/%Y" id="5de03907-ffff-49ff-98fb-100b7c784830EDDT2">08/2016</span>
+                    </span>
+                </span>
+                <div class="singlecolumn">
+                    <span class="jobline" id="5de03907-ffff-49ff-98fb-100b7c784830JDES2"><ul>
+  <li>Updated Argo data (e.g. ocean velocities and mixed layer depth) for Argo float program on Matlab</li>
+  <li>Updated Argo website using HTML and created Argo's 2016 newsletter using Indesign</li>
+</ul></span>
+                </div>
+            </div>
+      </div>
+      <div id="SECTION_EXPR3c6ec57b-4532-44cb-90e8-c6d812556dad" class="section" style="padding-top:0px;">
+        <div class="heading">
+                <div id="SECTNAME_EXPR3c6ec57b-4532-44cb-90e8-c6d812556dad" class="sectiontitle">Projects</div>
+            </div>
+        <div id="PARAGRAPH_3c6ec57b-4532-44cb-90e8-c6d812556dad_1_25c86d07-f5d2-40d6-82e8-0347dbc9a13c" class="paragraph parlrColmn firstparagraph" style="padding-top:0px;">
+                <span class="dates_wrapper">
+                    
+                    <span class="paddedline">
+                        <span class="jobtitle" id="3c6ec57b-4532-44cb-90e8-c6d812556dadJTIT1">Reframe</span>
+                    </span>
+                    <span class="paddedline txtItl">
+                        <span class="jobdates" format="%m/%Y" id="3c6ec57b-4532-44cb-90e8-c6d812556dadJSTD1">01/2018</span>
+                        <span> - </span>
+                        <span class="jobdates" format="%m/%Y" id="3c6ec57b-4532-44cb-90e8-c6d812556dadEDDT1">05/2018</span>
+                    </span>
+                </span>
+                <div class="singlecolumn">
+                    <span class="jobline" id="3c6ec57b-4532-44cb-90e8-c6d812556dadJDES1"><ul>
+  <li>Developed informative and creative web application using JavaScript to promote mental health awareness in a visually impactful way</li>
+</ul></span>
+                </div>
+            </div>
+        <div id="PARAGRAPH_3c6ec57b-4532-44cb-90e8-c6d812556dad_2_ff31e491-0930-401e-8ea1-883283d57e65" class="paragraph parlrColmn" style="padding-top:0px;">
+                <span class="dates_wrapper">
+                    
+                    <span class="paddedline">
+                        <span class="jobtitle" id="3c6ec57b-4532-44cb-90e8-c6d812556dadJTIT2">Cake Decorator </span>
+                    </span>
+                    <span class="paddedline txtItl">
+                        <span class="jobdates" format="%m/%Y" id="3c6ec57b-4532-44cb-90e8-c6d812556dadJSTD2">04/2018</span>
+                        
+                        <span class="jobdates" format="%m/%Y" id="3c6ec57b-4532-44cb-90e8-c6d812556dadEDDT2"></span>
+                    </span>
+                </span>
+                <div class="singlecolumn">
+                    <span class="jobline" id="3c6ec57b-4532-44cb-90e8-c6d812556dadJDES2"><ul>
+  <li>Developed and designed creative website using JavaScript that allows users to drag and drop decorations onto a cake and get scored based on their choices</li>
+</ul></span>
+                </div>
+            </div>
+        <div id="PARAGRAPH_3c6ec57b-4532-44cb-90e8-c6d812556dad_3_c0a292b0-24bc-4e38-8b89-67143bec8146" class="paragraph parlrColmn" style="padding-top:0px;">
+                <span class="dates_wrapper">
+                    
+                    <span class="paddedline">
+                        <span class="jobtitle" id="3c6ec57b-4532-44cb-90e8-c6d812556dadJTIT3">BruinPlay</span>
+                    </span>
+                    <span class="paddedline txtItl">
+                        <span class="jobdates" format="%m/%Y" id="3c6ec57b-4532-44cb-90e8-c6d812556dadJSTD3">10/2017</span>
+                        <span> - </span>
+                        <span class="jobdates" format="%m/%Y" id="3c6ec57b-4532-44cb-90e8-c6d812556dadEDDT3">12/2017</span>
+                    </span>
+                </span>
+                <div class="singlecolumn">
+                    <span class="jobline" id="3c6ec57b-4532-44cb-90e8-c6d812556dadJDES3"><ul>
+  <li>Developed web application using HTML/CSS, JavaScript, and Node that stores and plays songs in a database, and allows users to add and remove songs</li>
+</ul></span>
+                </div>
+            </div>
+        <div id="PARAGRAPH_3c6ec57b-4532-44cb-90e8-c6d812556dad_4_2aa1912f-3bfa-496d-83ce-81a4da11e223" class="paragraph parlrColmn" style="padding-top:0px;">
+                <span class="dates_wrapper">
+                    
+                    <span class="paddedline">
+                        <span class="jobtitle" id="3c6ec57b-4532-44cb-90e8-c6d812556dadJTIT4">UX Phone App Prototype</span>
+                    </span>
+                    <span class="paddedline txtItl">
+                        <span class="jobdates" format="%m/%Y" id="3c6ec57b-4532-44cb-90e8-c6d812556dadJSTD4">10/2017</span>
+                        <span> - </span>
+                        <span class="jobdates" format="%m/%Y" id="3c6ec57b-4532-44cb-90e8-c6d812556dadEDDT4">11/2017</span>
+                    </span>
+                </span>
+                <div class="singlecolumn">
+                    <span class="jobline" id="3c6ec57b-4532-44cb-90e8-c6d812556dadJDES4"><ul>
+  <li>Designed a music-sharing app using Adobe XD that helps users discover and keep up with news and releases of artists</li>
+</ul></span>
+                </div>
+            </div>
+        <div id="PARAGRAPH_3c6ec57b-4532-44cb-90e8-c6d812556dad_5_ec7be5b0-aff3-43f1-b4db-8b0a96c4e091" class="paragraph parlrColmn" style="padding-top:0px;">
+                <span class="dates_wrapper">
+                    
+                    <span class="paddedline">
+                        <span class="jobtitle" id="3c6ec57b-4532-44cb-90e8-c6d812556dadJTIT5">Walking Cycle Animation</span>
+                    </span>
+                    <span class="paddedline txtItl">
+                        <span class="jobdates" format="%m/%Y" id="3c6ec57b-4532-44cb-90e8-c6d812556dadJSTD5">04/2017</span>
+                        <span> - </span>
+                        <span class="jobdates" format="%m/%Y" id="3c6ec57b-4532-44cb-90e8-c6d812556dadEDDT5">05/2017</span>
+                    </span>
+                </span>
+                <div class="singlecolumn">
+                    <span class="jobline" id="3c6ec57b-4532-44cb-90e8-c6d812556dadJDES5"><ul>
+  <li>Mathematica demonstration of walking animation both as using key frames and mathematics to translate the figure</li>
+</ul></span>
+                </div>
+            </div>
+        <div id="PARAGRAPH_3c6ec57b-4532-44cb-90e8-c6d812556dad_6_c40ab371-c356-4ff9-bf78-4094da524e45" class="paragraph parlrColmn" style="padding-top:0px;">
+                <span class="dates_wrapper">
+                    
+                    <span class="paddedline">
+                        <span class="jobtitle" id="3c6ec57b-4532-44cb-90e8-c6d812556dadJTIT6">Volleyball Serves</span>
+                    </span>
+                    <span class="paddedline txtItl">
+                        <span class="jobdates" format="%m/%Y" id="3c6ec57b-4532-44cb-90e8-c6d812556dadJSTD6">12/2016</span>
+                        <span> - </span>
+                        <span class="jobdates" format="%m/%Y" id="3c6ec57b-4532-44cb-90e8-c6d812556dadEDDT6">01/2017</span>
+                    </span>
+                </span>
+                <div class="singlecolumn">
+                    <span class="jobline" id="3c6ec57b-4532-44cb-90e8-c6d812556dadJDES6"><ul>
+  <li>Mathematica simulation of the physics of a volleyball serve, with parameters such as angle and speed of launch</li>
+</ul></span>
+                </div>
+            </div>
+      </div>
+      <div id="SECTION_HILT061703b1-10a2-49ef-bca5-c325c051137b" class="section hiltSec" style="padding-top:0px;">
+        <div class="heading">
+                <div id="SECTNAME_HILT061703b1-10a2-49ef-bca5-c325c051137b" class="sectiontitle">Languages</div>
+            </div>
+        <div id="PARAGRAPH_061703b1-10a2-49ef-bca5-c325c051137b_1_df1645e1-f673-46cc-9f9f-f0327fe17adf" class="paragraph firstparagraph" style="padding-top:0px;">
+                <div class="singlecolumn maincolumn">
+                    <table class="twocol">
+                        <tr>
+                            <td class="field twocol_1" id="061703b1-10a2-49ef-bca5-c325c051137bSKC11"><p>C++, HTML, CSS, JavaScript, Mathematica, C, Java, Bash</p></td>
+                            <td class="field twocol_2" id="061703b1-10a2-49ef-bca5-c325c051137bSKC21"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+      </div>
+      <div id="SECTION_ACCM8e7c702e-b81f-4495-9572-4d05512573e4" class="section" style="padding-top:0px;">
+        <div class="heading">
+                <div id="SECTNAME_ACCM8e7c702e-b81f-4495-9572-4d05512573e4" class="sectiontitle">Organizations</div>
+            </div>
+        <div id="PARAGRAPH_8e7c702e-b81f-4495-9572-4d05512573e4_1_04bec792-bcab-409b-b339-fb66261062bc" class="paragraph firstparagraph" style="padding-top:NaNpx;">
+                <div class="field singlecolumn" id="8e7c702e-b81f-4495-9572-4d05512573e4FRFM1"><p><strong>Creative Labs </strong><em>Oct 2017 - ongoing</em></p>
+<p>Involved in quarter-long creative projects such as developing web applications like Reframe and learning UX design</p>
+<p><strong>ACM Hack </strong><em>Oct 2017 - ongoing</em></p>
+<p>Built websites using HTML, CSS, JavaScript, Bootstrap, Node, Express and learned about iOS app development</p>
+<p><strong>IEEE WATT </strong><em>Oct 2017 - ongoing</em></p>
+<p>Involved in technical workshops in electrical engineering</p>
+<p><strong>Augment Software </strong><em>Jun 2016 - Aug 2016</em></p>
+<p>Developed programs using Mathematica through reading assignments and collaborative projects</p></div>
+            </div>
+      </div>
+      <div id="SECTION_ADDIa7ca0326-91f7-445e-bea4-120888033dc4" class="section" style="padding-top:0px;">
+        <div class="heading">
+                <div id="SECTNAME_ADDIa7ca0326-91f7-445e-bea4-120888033dc4" class="sectiontitle">Honors and Awards</div>
+            </div>
+        <div id="PARAGRAPH_a7ca0326-91f7-445e-bea4-120888033dc4_1_37e6d3da-caa9-45eb-bfc0-7c5233417912" class="paragraph firstparagraph" style="padding-top:NaNpx;">
+                <div class="field singlecolumn" id="a7ca0326-91f7-445e-bea4-120888033dc4FRFM1"><p>UCLA Regents Scholar<br>
+National Merit Finalist</p></div>
+            </div>
+      </div>
+    </div>
+  </body>
+</html>
