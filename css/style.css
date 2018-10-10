@@ -434,8 +434,16 @@ h1{
   	width: 100vw;
   }
 
-  .about__container, .projects__container, .content {
+  .about__container, .projects__container{
   	width: 85vw;
+  }
+
+  .content {
+  	width: 93vw;
+  }
+
+  .projects__title {
+  	margin-top: 100px;
   }
 
   .sidebar {
