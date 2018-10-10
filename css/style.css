@@ -434,7 +434,7 @@ h1{
   	width: 100vw;
   }
 
-  .about__container, .projects__container {
+  .about__container, .projects__container, content {
   	width: 85vw;
   }
 
