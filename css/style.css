@@ -32,11 +32,14 @@ p, ul {
 
 p:hover, ul:hover {
 	opacity: 1;
+}
+
+.projects p:hover {
 	transform: translateX(6px);
 }
 
-.sidebar__content ul:hover {
-	transform: translate(0);
+.about__container p:hover {
+	border-left: 2px solid #8cced6;
 }
 
 a{
@@ -204,11 +207,6 @@ h1{
     padding-left: 1em;
     padding-right: 1em;
 }
-
-.about__container p:hover {
-	border-left: 2px solid #8cced6;
-}
-
 
 .projects__container{
 	width: 60vw;
