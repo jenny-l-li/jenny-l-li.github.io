@@ -9,7 +9,8 @@ body{
 	margin: 0;
 	/*light theme*/
 	/*background-color: #f4f9f9;*/
-	background-color: #45434c;
+	/*background-color: #45434c;*/
+	background-color: #322e33;
 }
 
 p {
@@ -53,7 +54,8 @@ h1{
 .sidebar{
 	width: 25vw;
 	height: 100vh;
-	background-color: #322e33;
+/*	background-color: #322e33;*/
+	background-color: #1c181d;
 	position: fixed;
 	left: 0;
 	display: flex;
